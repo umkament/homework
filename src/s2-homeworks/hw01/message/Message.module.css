@@ -1,5 +1,8 @@
 .message {
+display: flex;
+    align-items: flex-end;
 
+    margin: 30px;
 }
 
 .imageAndText {
@@ -7,25 +10,41 @@
 }
 
 .imageAndText img {
-
+    height: 50px;
+    width: 50px;
 }
 
 .text {
-
+word-wrap: break-word;
+    min-width: 15px;
+    max-width: 300px;
 }
 
 .text:after {
-
+    word-wrap: break-word;
+    min-width: 15px;
+    max-width: 300px;
 }
 
 .name {
-
+font-size: 15px;
+    font-weight: inherit;
+    color: black;
 }
 
 .messageText {
+padding: 10px;
+
+    border-radius: 0px 5px 5px 5px;
+    background-color: #DDEEFF;
 
 }
 
-.time {
 
+.time {
+    font-size: 10px;
+    margin-left: 10px;
+    color: lightslategrey;
+display: flex;
+    justify-content: flex-end;
 }

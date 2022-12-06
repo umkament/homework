@@ -4,6 +4,7 @@ import MessageSender from './message-sender/MessageSender'
 import s2 from '../../s1-main/App.module.css'
 import FriendMessage from './friend-message/FriendMessage'
 import avatar from './avatar.png'
+import avatar2 from './avatar2.png'
 
 /*
 * 1 - описать тип MessageType
@@ -14,29 +15,42 @@ import avatar from './avatar.png'
 * */
 
 // нужно создать правильный тип вместо any
-export type MessageType = any
+export type IntoMessageType= {
+    text: string,
+    time: string
+}
+export type UserType = {
+    avatar: typeof avatar
+    name: string
+}
+
+export type MessageType = {
+    id: number,
+    user: UserType
+    message: IntoMessageType
+}
 
 // структуру объекта не менять
 export const message0: MessageType = {
     id: 0,
     user: {
         avatar: avatar, // можно менять
-        name: 'Some Name',  // можно менять
+        name: 'He',  // можно менять
     },
     message: {
-        text: 'some textsome textsome textsome textsome textsome textsome text', // можно менять
+        text: 'Do you have free time?', // можно менять
         time: '22:00', // можно менять
     },
 }
 export const friendMessage0: MessageType = {
     id: 100,
     user: {
-        avatar: avatar, // можно менять
-        name: 'Friend Name', // можно менять
+        avatar: avatar2, // можно менять
+        name: 'She', // можно менять
     },
     message: {
-        text: 'зеркальное сообщение для тренировки css', // можно менять
-        time: '22:00', // можно менять
+        text: 'I am very busy, by', // можно менять
+        time: '23:05', // можно менять
     },
 }
 
